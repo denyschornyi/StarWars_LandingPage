@@ -200,3 +200,14 @@ body {
   height: 32px;
   background: transparent url('/img_min/right-arrow.svg');
 }
+@media (max-width: 620px) {
+  .hero__subtitle {
+    font-size: 32px;
+  }
+  .hero__title {
+    font-size: 45px;
+  }
+  .hero__description {
+    font-size: 15px;
+  }
+}
