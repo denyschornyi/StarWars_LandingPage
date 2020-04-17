@@ -9,7 +9,7 @@
 
 body{
     background: #070506 url(/img_min/main-bg.png) no-repeat center center;
-    background-size: cover;
+    background-attachment: fixed;
     font-family: 'Roboto', sans-serif;
     color: #FFFFFF;
 }
@@ -78,6 +78,7 @@ body{
         margin-bottom: 70px;
     }
     &__button-play{
+        display: inline-block;
         background: linear-gradient(90deg, #FB641A 0%, #FC3309 100%);
         border-radius: 300px;
         padding: 25px 87px 25px 34px;
@@ -88,6 +89,7 @@ body{
         text-decoration: none;
         color: #FFFFFF;
         position: relative;
+        margin-bottom: 50px;
         &::after{
             content: '';
             display: block;
@@ -110,5 +112,69 @@ body{
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.3);
         }
+    }
+} //hero
+
+.episodes{
+    &__title{
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 150%;
+        margin-bottom: 25px;
+    }
+}
+
+.slider{
+    display: flex;
+    flex-wrap: wrap;
+    &__item{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 250px;
+        height: 200px;
+        box-shadow: 0px 10px 26px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        padding: 25px;
+        overflow: hidden;
+        margin-right: 20px;
+        margin-bottom: 25px;
+        z-index: 2;
+        position: relative;
+    }
+    &__item:after{
+        content: '';
+        display: block;
+        width: 100%; 
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(80, 80, 80, 0.86);
+        z-index: -1;
+    }
+    &__item:hover:after{
+        background: rgba(64, 101, 255, 0.86);
+    }
+    &__img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+    }
+    &__year{
+        font-size: 18px;
+        line-height: 150%;
+    }
+    &__title{
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 150%;
+    }
+    &__rating{
+        font-size: 13px;
+        line-height: 150%;
     }
 }
