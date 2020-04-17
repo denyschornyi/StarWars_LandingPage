@@ -12,8 +12,8 @@
 }
 
 body{
-    background: #070506 url(/img_min/main-bg.jpg) top right -190% no-repeat;
-    background-size: contain;
+    background: #070506 url(/img_min/main-bg2.png) center no-repeat;
+    background-size: cover;
     background-attachment: fixed;
     font-family: 'Roboto', sans-serif;
     color: #FFFFFF;
@@ -61,6 +61,8 @@ body{
         font-size: 64px;
         line-height: 78px;
         margin-bottom: 25px;
+        animation: pulse infinite;
+
     }
     &__description{
         font-size: 18px;
@@ -105,6 +107,7 @@ body{
             height: 65px;
             background: #FFFFFF url('/img_min/play.svg') no-repeat center;
             border-radius: 50%;
+            
         }
         &::before{
             content: '';
@@ -116,6 +119,10 @@ body{
             height: 81px;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.3);
+            
+             animation: pulse 1s ease-in;
+            
+            animation-iteration-count: infinite;
         }
     }
 } //hero
@@ -224,4 +231,28 @@ body{
             font-size: 15px;
         }
     }
-}
+}  
+@keyframes pulse {
+    0% {
+      -webkit-transform: scale(1);
+      opacity: 0.0;
+   }
+   25% {
+      -webkit-transform: scale(1.1);
+      opacity: 0.1;
+   }
+   50% {
+      -webkit-transform: scale(1.2);
+      opacity: 0.3;
+   }
+   75% {
+      -webkit-transform: scale(1.3);
+      opacity: 0.5;
+   }
+   100% {
+      -webkit-transform: scale(1.4);
+      opacity: 0.0;
+   }
+  }
+  
+  
